@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="home-alt-2-solid-24.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos deportivos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form onsubmit="return validateForm()">
+            <h1>Iniciar Sesión</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="username" required>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgJJREFUSEuNlT9LXUEQxX+DpH4RtbCUkMomoK1Y2ig8SMA0aexsUsQ/pY0gCKKI4EeQNCEasfELJBAkRUilWCqCplBBEHT13btv78y9u/f6qsfdmTk7Z86cFRp/Ajgfpf9D5ST7IAiuyLApBZqPzWqnINLQhKROjK0Q72gcWAGG/fFfYBH42UWvu2ikpAn/KLDjG1Gx8giujbAf+NBEBrrqZ/AaOAV6DU9FoXMHb4A7TalmRYqDaJNt4HuqfY8zARzWUxSZlv80B7JWO2n4AmyU5BF6NEOOKGcK+FHgR+85CXJgpJmrNdwrgOtCPqEFnAj06wS1FRcO3oLcFLtSlbXRbDdZDWoa+FrVQqai98BuVCfJDuIbNgas+j14AP4BC8CvWPHySH0HKRuI8F67/hZSyVQfWD+p3LLWI6xtJawiqzAAzAMjzzy/Q+gL0shrXAF/gN/AOnAZXcbKBubJn4AthFYwu0RgHi7/BTfjYK/cbU6R2W0+49i0hJViLAs69APwzcrdQg4BxyA92R40eETk+BYYErgMu1Ka17aD2bT/NSDmTCyBW+7WUBRlaj1zMJiFqXesYPAl8uEIGPWzwQAA98CrkpLNE5juLtz5WnCtYC2lIRunaC5mn0Y1s1z+neOKwSkPqQ45PYOU4wakKC0NlL/EMdQme3uIFE3hxIVgBfIEJGTHHcFcxSAAAAAASUVORK5CYII="/>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="password" required>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdNJREFUSEt9lr0uBkEUhp/jFkQhEokoaN2Chk4j7kGiEo1oCAVRqLgHlU5C4hYUGp2QiErcgRx2d3Zmzp6Z2eL7NrNzfua8P7tC6xJA8w1hwf6lDfn+bI8t4ZLaAoLamoUGUwqhu49XI/c2wi7Ker9ZeELlGvSuNIA+T/gZChQyZ11cgh6MiSZbj/+jT1oJsgI2NDSwg3Ib7k9RbkKhPeAo3G+APPZgVTGoz+YZWAP2gasJWEeCnik8AJtuVB7kwgngF5gB5oBvC5bMg34BP8BsjYwGZAd4oIyADKA5wmlYlwSsn1RLCWPKYiMCsUAiS0fNROUs0D/Q1LMtECmotkCBkr4zYQuVc9DVpsr9w1ego/O9GbVVXX+0T2ChrI8a3eL6G7A8xXLaywTKooxqrBxlG4MMBmHkrkDTTDK+D4EdoVIKTy/nZgF8p9Kqvzh/m5K7ByLndY2C7mRDzUIB250GK3SqmtpNs4CxCivDdIKCtK00ch1GsxvGHmIzN40r6QQ1/RcEkiWtYRCV3KCpo0zWZwSuwCLb0QewWJ5vgVF2jO8oSxUlR+Z0VnEButK2CkfTF+AwWsV42NwqnB83QS6+wNz7N0M8d1M7a+dXBdHVvjb+AAn1yRvlYJxiAAAAAElFTkSuQmCC"/>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Recuerdame </label>
+                <a href="#">Contraseña olvidada</a>
+            </div>
+            <button type="submit" class="btn">Iniciar sesión</button>
+            <div class="register-link">
+                <p>No tienes una cuenta? <a href="#">Regístrate</a></p>
+            </div>
+        </form>
+    </div>    
+    <script>
+    function validateForm() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username && password) {
+            window.location.href = 'index.html'; 
+            return false; 
+        } else {
+            alert('Por favor, completa todos los campos.');
+            return false; 
+        }
+    }
+    </script>
+</body>
+</html>
